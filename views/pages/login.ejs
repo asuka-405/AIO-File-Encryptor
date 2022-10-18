@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global/styles.css" />
+    <link rel="stylesheet" href="/styles/form/styles.css" />
+    <script defer src="/script/form.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="flex center">
+    <main class="form_container" id="form_container">
+      <form
+        action="/auth/login"
+        method="post"
+        class="container form login flex"
+        id="login"
+      >
+        <h1>Login</h1>
+        <input
+          name="username"
+          type="text"
+          placeholder="username"
+          required
+          autocomplete="username"
+          pattern="[a-zA-Z0-9_@#]{5-15}"
+        />
+        <input
+          name="pass"
+          class="password"
+          type="password"
+          placeholder="password"
+          autocomplete="current-password"
+          pattern="[a-zA-Z0-9_@#]{8-30}"
+          required
+        />
+        <label for="show-password"
+          ><input name="show-password" type="checkbox" id="forgot-check" />show
+          password</label
+        >
+        <button type="submit">login</button>
+        <h6>
+          <a href="/forgot-password" class="link forgot">Forgot Password</a>
+        </h6>
+        <h6>
+          Don't have an account?
+          <a href="/register" class="link">Register here</a>
+        </h6>
+      </form>
+    </main>
+  </body>
+</html>

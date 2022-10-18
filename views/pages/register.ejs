@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global/styles.css" />
+    <link rel="stylesheet" href="/styles/form/styles.css" />
+    <script defer src="/script/randomiser.js"></script>
+    <script defer src="/script/form.js"></script>
+    <title>Register</title>
+  </head>
+  <body class="flex center">
+    <main class="form_container" id="form_container">
+      <form
+        action="/auth/register"
+        method="POST"
+        class="form register flex container "
+        id="register"
+      >
+        <h1>Register</h1>
+        <input
+          name="email"
+          type="email"
+          placeholder="email"
+          autocomplete="email"
+          required
+        />
+        <input
+          name="phone"
+          type="tel"
+          placeholder="phone number (optional)"
+          autocomplete="tel"
+        />
+        <input
+          name="name"
+          type="text"
+          placeholder="full name"
+          autocomplete="name"
+          required
+        />
+        <!-- pattern="[a-zA-Z]" -->
+        <!-- pattern="[a-zA-Z0-9]{5-15}" -->
+        <input
+          name="username"
+          type="text"
+          placeholder="new username"
+          autocomplete="username"
+          required
+        />
+        <input
+          name="pass"
+          class="password"
+          id="password"
+          type="password"
+          placeholder="password"
+          autocomplete="new-password"
+          required
+        />
+        <!-- pattern="[a-zA-Z0-9_@#]{8-30}"
+        pattern="[a-zA-Z0-9_@#]{8-30}" -->
+        <input
+          name="pass_con"
+          class="password"
+          id="pass_con"
+          type="password"
+          placeholder="confirm password"
+          autocomplete="new-password"
+          required
+        />
+        <h6>
+          <a class="link forgot" id="randomiser">Randomise Password</a>
+        </h6>
+        <label for="show-password" id="pass-tv_l"
+          ><input
+            name="show-password"
+            type="checkbox"
+            id="forgot-check"
+          />show password</label
+        >
+        <button type="submit">Register</button>
+        <h6>
+          Already registered?
+          <a href="/login" class="link">Login here</a>
+        </h6>
+      </form>
+    </main>
+  </body>
+</html>

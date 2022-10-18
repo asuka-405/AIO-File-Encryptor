@@ -1,0 +1,73 @@
+$color-accent: #ff7f50;
+
+.form{
+    *{
+        margin-left: 0;
+        background: transparent;
+    }
+    h1{
+        width: 100%;
+    }
+    
+    input, button{
+        padding: 0.75em;
+        border: none;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    input{
+        width: 100%;
+        border-bottom: 1px solid coral;
+        &:focus{
+            outline: 2px;
+        }
+    }
+    #forgot-check{
+        width: 15px;
+        margin-right: 0.5em ;
+    }
+    button{
+        width: 60%;
+        background-color: coral;
+        font-weight: bolder;
+        border: 1px solid transparent;
+        transition: 150ms ease-in-out;
+        &:hover, &:focus{
+            background-color: transparent;
+            border: 1px solid $color-accent;
+            outline: none;
+        }
+    }
+}
+
+.login, .forgot{
+    width: clamp(300px, 70vw, 600px);
+}
+
+.register{
+    input{
+        margin: 0;
+    }
+    button{
+        width: 40%;
+    }
+    width: clamp(300px, 70vw, 900px);
+    @media (min-width: 701px){
+        flex-direction: row;
+        input{
+            width: 40%;
+            &:first-child(0){
+                margin-left: 10%;
+            }
+        }
+        button{
+            margin-right: 40%;
+        }
+        h6:last-of-type{
+            margin-top: 2em;
+            width: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,97 @@
+$color-accent: coral;
+$color-accent_dimmed: rgba(255, 127, 80, 0.75);
+$body-bg: rgb(30,30,30);
+
+#name{
+    margin-top: -3.5em;
+    margin-left: -0.5em;
+}
+#timestamp{
+    position: absolute;
+    top: -3.5em;
+    right: 3em;
+    font-size: 0.65rem;
+    color: $color-accent_dimmed;
+    @media (max-width: 999px){
+        top: auto;
+        bottom: -3.5em;
+        left: 3em;
+    }
+}
+.dashboard{
+    position: relative; 
+    .user_info{
+        border-bottom: 1px solid $color-accent_dimmed;
+        // border-radius: 50%;
+        margin-top: 3em;
+        padding: 1em;
+        ul{
+            list-style-type: none;
+            font-size: 0.8rem;
+            margin: 0;
+            padding: 0;
+            gap: 2em;
+            li{
+                margin: 0;
+                text-align: center;
+                padding: 0 2em;
+                border-right: 1px solid $color-accent_dimmed;
+                &:last-of-type{
+                    border: 0;
+                }
+            }
+            @media (max-width: 1000px){
+                flex-direction: column;
+                li{
+                    padding: 1em;
+                    border: none;
+                    &:first-of-type{
+                        border-bottom: 1px solid $color-accent_dimmed;
+                    }
+                    &:nth-of-type(2){
+                        padding: 0;
+                    }
+                    &:last-of-type{
+                        border-top: 1px solid $color-accent;
+                    }
+                }
+            }
+        }
+    }
+    .files-list{
+        padding: 3em;
+        gap: 2em;
+        .card{
+            width: clamp(200px, 35vw, 300px);
+            min-width: 200px;
+            padding: 2em;
+            padding: 4em;
+            border-bottom: 1px solid $color-accent_dimmed;
+            border-radius: 2px;
+            position: relative;
+            background-color: $body-bg  ;
+            flex-direction: column;
+            gap: 1em;
+            .date{
+                position: absolute;
+                top: 1.5em;
+                right: 1.5em;
+                font-size: 0.6rem;
+                color: $color-accent_dimmed;
+            }
+            a{
+                text-decoration: underline $color-accent_dimmed;
+                text-underline-offset: 5px;
+                &:hover, &:focus{
+                    text-decoration: none;
+                }
+                line-height: 2em;
+            }
+            .sign{
+                font-size: 0.62rem;
+                color: white;
+                margin: 0;
+            }
+        }
+    }
+}

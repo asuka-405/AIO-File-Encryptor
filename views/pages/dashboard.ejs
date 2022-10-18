@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global/styles.css" />
+    <link rel="stylesheet" href="/styles/dashboard/styles.css" />
+    <title>Dashboard</title>
+  </head>
+  <body class="flex center">
+    <main class="container dashboard">
+      <h1 class="name" id="name"><%= name %></h1>
+      <h6 class="timestamp" id="timestamp">
+        last active on : <%= last_visited %>
+      </h6>
+      <section class="user_info" id="user_info">
+        <ul class="flex center">
+          <li class="info_container" id="info-"><%= username %></li>
+          <li class="info_container" id="info-"><%= email %></li>
+          <li class="info_container" id="info-"><%= phone_number %></li>
+        </ul>
+      </section>
+      <section class="files-list  flex center" id="files-list">
+        <%  for( var i = 0; i < data.length; i++){  %>
+          <div class="card item flex center" id="item">
+            <div class="date">
+              <%= data[i].timestamp %>
+            </div>
+            <a href="
+            <%= data[i].link %>
+            ">
+              <div class="title link">
+                <%= data[i].title %>
+              </div>
+            </a>
+            <div class="sign">
+              <%= `signature: ${data[i].sign}` %>
+            </div>
+          </div>
+        <% } %>
+      </section>
+    </main>
+    <div class="spacer"></div>
+  </body>
+</html>

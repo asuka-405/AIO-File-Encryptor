@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global/styles.css" />
+    <link rel="stylesheet" href="/styles/form/styles.css" />
+    <title>Register</title>
+  </head>
+  <body class="flex center">
+    <main class="form_container" id="form_container">
+      <form
+        action="/auth/login"
+        method="post"
+        class="container form forgot flex"
+        id="register"
+      >
+        <h1>Forgot Details</h1>
+        <input type="email" placeholder="email" autocomplete="email" required />
+        <button type="submit">Send Password</button>
+        <h6>
+            create new account
+            <a href="/register" class="link"> here</a>
+        </h6>
+        <h6>
+            remember details?
+            <a href="/login" class="link"> Login here</a>
+        </h6>
+      </form>
+    </main>
+  </body>
+</html>

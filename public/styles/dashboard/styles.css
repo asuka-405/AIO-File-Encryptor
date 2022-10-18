@@ -1,0 +1,99 @@
+#name {
+  margin-top: -3.5em;
+  margin-left: -0.5em;
+}
+
+#timestamp {
+  position: absolute;
+  top: -3.5em;
+  right: 3em;
+  font-size: 0.65rem;
+  color: rgba(255, 127, 80, 0.75);
+}
+@media (max-width: 999px) {
+  #timestamp {
+    top: auto;
+    bottom: -3.5em;
+    left: 3em;
+  }
+}
+
+.dashboard {
+  position: relative;
+}
+.dashboard .user_info {
+  border-bottom: 1px solid rgba(255, 127, 80, 0.75);
+  margin-top: 3em;
+  padding: 1em;
+}
+.dashboard .user_info ul {
+  list-style-type: none;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  gap: 2em;
+}
+.dashboard .user_info ul li {
+  margin: 0;
+  text-align: center;
+  padding: 0 2em;
+  border-right: 1px solid rgba(255, 127, 80, 0.75);
+}
+.dashboard .user_info ul li:last-of-type {
+  border: 0;
+}
+@media (max-width: 1000px) {
+  .dashboard .user_info ul {
+    flex-direction: column;
+  }
+  .dashboard .user_info ul li {
+    padding: 1em;
+    border: none;
+  }
+  .dashboard .user_info ul li:first-of-type {
+    border-bottom: 1px solid rgba(255, 127, 80, 0.75);
+  }
+  .dashboard .user_info ul li:nth-of-type(2) {
+    padding: 0;
+  }
+  .dashboard .user_info ul li:last-of-type {
+    border-top: 1px solid coral;
+  }
+}
+.dashboard .files-list {
+  padding: 3em;
+  gap: 2em;
+}
+.dashboard .files-list .card {
+  width: clamp(200px, 35vw, 300px);
+  min-width: 200px;
+  padding: 2em;
+  padding: 4em;
+  border-bottom: 1px solid rgba(255, 127, 80, 0.75);
+  border-radius: 2px;
+  position: relative;
+  background-color: rgb(30, 30, 30);
+  flex-direction: column;
+  gap: 1em;
+}
+.dashboard .files-list .card .date {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  font-size: 0.6rem;
+  color: rgba(255, 127, 80, 0.75);
+}
+.dashboard .files-list .card a {
+  -webkit-text-decoration: underline rgba(255, 127, 80, 0.75);
+          text-decoration: underline rgba(255, 127, 80, 0.75);
+  text-underline-offset: 5px;
+  line-height: 2em;
+}
+.dashboard .files-list .card a:hover, .dashboard .files-list .card a:focus {
+  text-decoration: none;
+}
+.dashboard .files-list .card .sign {
+  font-size: 0.62rem;
+  color: white;
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
